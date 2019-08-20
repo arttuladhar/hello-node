@@ -18,5 +18,21 @@ oc project nodejs-openshift
 ### Creating New App from Source to Image
 
 ```bash
-oc new-app git@github.com:arttuladhar/hello-node.git -l name=hello-nodejs
+oc new-app https://github.com/arttuladhar/hello-node.git -l name=hello-nodejs
 ```
+
+### Deploying the App
+
+```bash
+oc get svc
+```
+
+### Configuring Routing
+
+```
+oc expose svc/nodejs-ex --hostname=www.example.com
+```
+
+### Reference
+
+https://github.com/sclorg/nodejs-ex
