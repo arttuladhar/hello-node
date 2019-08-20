@@ -12,11 +12,11 @@ oc new-project nodejs-openshift \
 ### Using New Project
 
 ```bash
-oc project nodejs-echo
+oc project nodejs-openshift
 ```
 
 ### Creating New App from Source to Image
 
 ```bash
-oc new-app https://github.com/sclorg/nodejs-ex -l name=myapp
+oc new-app git@github.com:arttuladhar/hello-node.git -l name=hello-nodejs
 ```
